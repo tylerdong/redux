@@ -10,6 +10,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
 })
 
+/**
+ * 容器组件，得到当前过滤器并渲染Link
+ */
 export default connect(
   mapStateToProps,
   mapDispatchToProps
