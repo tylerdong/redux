@@ -9,8 +9,9 @@ import Todo from './Todo'
  * @returns {*}
  * @constructor
  */
-const TodoList = ({ todos, toggleTodo }) => (
-  <ul>
+const TodoList = ({ todos, toggleTodo }) => {
+  console.log(todos)
+  return <ul>
     {todos.map(todo =>
       <Todo
         key={todo.id}
@@ -19,7 +20,7 @@ const TodoList = ({ todos, toggleTodo }) => (
       />
     )}
   </ul>
-)
+}
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
